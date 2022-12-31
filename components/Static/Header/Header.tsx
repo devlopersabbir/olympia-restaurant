@@ -23,7 +23,7 @@ const Header = () => {
   const router = useRouter();
   return (
     <>
-      <BoxContainer>
+      <Container maxW="1280px">
         <Flex py={3} align="center" justify="space-between">
           <Link href="/">
             <Heading as="h1">LOGO</Heading>
@@ -69,7 +69,7 @@ const Header = () => {
             icon={<Icon as={AiOutlineMenu} fontSize="3xl" />}
           />
         </Flex>
-      </BoxContainer>
+      </Container>
       <MobileMenu
         isOpen={isOpen}
         navLinks={navLinks}

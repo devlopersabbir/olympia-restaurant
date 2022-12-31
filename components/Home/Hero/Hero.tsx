@@ -23,6 +23,7 @@ const Hero = () => {
     <>
       {hero.map((data: any, i: number) => (
         <Box
+          key={i}
           w="100%"
           mt={1}
           zIndex={99}
