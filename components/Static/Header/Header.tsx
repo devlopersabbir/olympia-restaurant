@@ -14,6 +14,7 @@ import { GrBasket } from "react-icons/gr";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useRouter } from "next/router";
 import MobileMenu from "./MobileMenu";
+import BoxContainer from "../../Layout/BoxContainer";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,7 @@ const Header = () => {
   const router = useRouter();
   return (
     <>
-      <Container maxW="container.lg">
+      <BoxContainer>
         <Flex py={3} align="center" justify="space-between">
           <Link href="/">
             <Heading as="h1">LOGO</Heading>
@@ -68,7 +69,7 @@ const Header = () => {
             icon={<Icon as={AiOutlineMenu} fontSize="3xl" />}
           />
         </Flex>
-      </Container>
+      </BoxContainer>
       <MobileMenu
         isOpen={isOpen}
         navLinks={navLinks}

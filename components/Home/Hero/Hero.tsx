@@ -29,16 +29,12 @@ const Hero = () => {
           sx={{
             backgroundImage: `url(${data?.backgroundImage})`,
             width: "100%",
-            height: "80vh",
+            height: "auto",
             backgroundRepeat: "no-repeat",
             bgPos: "center",
           }}
         >
-          <Container
-            maxW="container.lg"
-            height="100%"
-            bgPos={["unset", "center"]}
-          >
+          <Container maxW="1280px" height="100%" bgPos={["unset", "center"]}>
             <Flex height="600px" align="center" gap={4}>
               <VStack align="flex-start" spacing={5} flex={1} pr={[0, 14]}>
                 <Heading
@@ -49,10 +45,10 @@ const Hero = () => {
                 >
                   {data?.title}
                 </Heading>
-                <Text as="p" py={4}>
+                <Text as="p" py={4} fontSize={16}>
                   {data?.sortDescription}
                 </Text>
-                <HStack align="center" spacing={[2, 4]}>
+                <HStack align="center" gap={[2, 4]} flexDir={["column", "row"]}>
                   <Button
                     type="button"
                     color="primary.100"
