@@ -39,14 +39,14 @@ const MenuPack = () => {
           sx={{ display: "flex", justifyContent: "center" }}
         >
           {categories.map((cat) => (
-            <Tab onClick={() => setSelectedId(cat.id)}>
+            <Tab onClick={() => setSelectedId(cat.id)} key={cat.id}>
               <AllTabs text={cat.name} key={cat.id} />
             </Tab>
           ))}
         </TabList>
         <TabPanels w="full">
           {categories.map((cat) => (
-            <TabPanel>
+            <TabPanel key={cat.id}>
               <Grid
                 templateColumns={[
                   "repeat(1, 1fr)",
