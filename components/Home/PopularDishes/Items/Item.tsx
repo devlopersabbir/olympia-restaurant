@@ -2,22 +2,9 @@ import { Heading, HStack, Image, Stack, Text, Icon } from "@chakra-ui/react";
 import React from "react";
 import { CButton } from "../../../Static/Common/Button";
 import { AiFillStar } from "react-icons/ai";
+import { Dishe } from "../../MenuPack/Data";
 
-interface IDishesItemProps {
-  name: string;
-  shortDescription: string;
-  logDescription?: string;
-  image: string;
-  price: number;
-}
-
-const Item: React.FC<IDishesItemProps> = ({
-  name,
-  shortDescription,
-  logDescription,
-  image,
-  price,
-}) => {
+const Item = ({ dish }: { dish: Dishe }) => {
   return (
     <Stack
       bg="white"
@@ -29,9 +16,15 @@ const Item: React.FC<IDishesItemProps> = ({
       align="center"
       spacing={0}
     >
-      <Image src={image} alt={name} w="full" h="full" objectFit="cover" />
+      <Image
+        src={dish.image}
+        alt={dish.name}
+        w="full"
+        h="full"
+        objectFit="cover"
+      />
       <Heading as="h2" color="primary.100" fontSize="3xl" fontWeight="bold">
-        {name}
+        {dish.name}
       </Heading>
       <HStack spacing={0} color="yellow.400" py={2}>
         <Icon as={AiFillStar} fontSize="xl" />
@@ -47,7 +40,7 @@ const Item: React.FC<IDishesItemProps> = ({
         fontWeight="400"
         textAlign="center"
       >
-        {shortDescription}
+        {dish.shortDesc}
       </Text>
       <HStack
         py={2}
@@ -58,7 +51,7 @@ const Item: React.FC<IDishesItemProps> = ({
         w="full"
       >
         <Heading as="h3" fontSize="2xl" color="primary.100">
-          ${price}
+          ${dish.price}
         </Heading>
         <CButton text="Add To Cart" key={5} />
       </HStack>

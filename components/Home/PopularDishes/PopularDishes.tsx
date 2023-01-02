@@ -4,7 +4,7 @@ import BoxContainer from "../../Layout/BoxContainer";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import Item from "./Items/Item";
 import { CIconButton } from "../../Static/Common/Button";
-import { dishe } from "./Data";
+import { dishes } from "../MenuPack/Data";
 
 const PopularDishes = () => {
   return (
@@ -29,15 +29,8 @@ const PopularDishes = () => {
         alignItems="center"
         mt={8}
       >
-        {dishe.map((item, index) => (
-          <Item
-            key={index}
-            image={item.image}
-            name={item.name}
-            price={item.price}
-            shortDescription={item.shortDescription}
-            logDescription={item.logDescription}
-          />
+        {dishes.map((item, index) => (
+          <Item key={index} dish={item} />
         ))}
       </Grid>
     </BoxContainer>
