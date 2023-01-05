@@ -29,11 +29,7 @@ interface ICButton {
 export const CButton: React.FC<ICButton> = ({ text, rightOrleftIcon }) => {
   return (
     <Button
-      leftIcon={
-        rightOrleftIcon ? (
-          <Icon as={rightOrleftIcon} fontSize="lg" />
-        ) : undefined
-      }
+      leftIcon={rightOrleftIcon && <Icon as={rightOrleftIcon} fontSize="lg" />}
       _hover={{
         bg: "background.100",
         color: "primary.100",
