@@ -13,14 +13,19 @@ import BoxContainer from "../../Layout/BoxContainer";
 const ReServeTable = () => {
   return (
     <BoxContainer>
-      <HStack gap={10} my={20}>
-        <VStack align="left" w="50%" pr={[0, 32]}>
+      <HStack gap={[3, 10]} my={[10, 20]} flexDir={["column", "column", "row"]}>
+        <VStack
+          align="left"
+          w={["100%", "100%", "50%"]}
+          pr={[0, 32]}
+          spacing={[3, 7]}
+        >
           <Heading
             textTransform="capitalize"
-            fontSize={[44, 36]}
+            fontSize={[30, 36, 44]}
             fontWeight="bold"
           >
-            We are more then multiple survice
+            do you have any dinner plan today? reserve your table
           </Heading>
           <Text fontSize="16px">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita,
@@ -28,7 +33,7 @@ const ReServeTable = () => {
             consectetur adipisicing elit. Dolore, dolor.
           </Text>
 
-          <Flex>
+          <Flex w="full" justify={["center", "left"]}>
             <Button
               type="button"
               color="primary.100"
@@ -43,7 +48,7 @@ const ReServeTable = () => {
             </Button>
           </Flex>
         </VStack>
-        <Image src="/img/reserve.png" alt="shape" w="50%" />
+        <Image src="/img/reserve.png" alt="shape" w={["100%", "100%", "50%"]} />
       </HStack>
     </BoxContainer>
   );

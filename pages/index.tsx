@@ -7,6 +7,8 @@ import PopularDishes from "../components/Home/PopularDishes/PopularDishes";
 import WeAreMultipleService from "../components/Home/MultipleService/WeAreMultipleService";
 import MenuPack from "../components/Home/MenuPack/MenuPack";
 import ReServeTable from "../components/Home/ReServeTable/ReServeTable";
+import CustomerReview from "../components/Home/CustomerReview/CustomerReview";
+import MeetChef from "../components/Home/MeetChefs/MeetChef";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +26,8 @@ export default function Home() {
       <WeAreMultipleService />
       <MenuPack />
       <ReServeTable />
+      <CustomerReview />
+      <MeetChef />
     </>
   );
 }

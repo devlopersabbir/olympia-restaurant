@@ -29,7 +29,6 @@ const MobileMenu: React.FC<IMobileMenuProps> = ({
   navLinks,
 }) => {
   const router = useRouter();
-  console.log(navLinks);
   return (
     <Drawer
       isOpen={isOpen}

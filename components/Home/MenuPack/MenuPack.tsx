@@ -25,13 +25,13 @@ const MenuPack = () => {
     <BoxContainer>
       <Heading
         textTransform="capitalize"
-        fontSize={[44, 36]}
+        fontSize={[36, 44, 36]}
         fontWeight="bold"
         textAlign="center"
       >
         We are more then multiple survice
       </Heading>
-      <Tabs py={10} variant="unstyled">
+      <Tabs py={[5, 10]} variant="unstyled">
         <TabList
           border="none"
           p="0"
@@ -46,14 +46,14 @@ const MenuPack = () => {
         </TabList>
         <TabPanels w="full">
           {categories.map((cat) => (
-            <TabPanel key={cat.id}>
+            <TabPanel key={cat.id} transition="ease all 0.5s">
               <Grid
                 templateColumns={[
                   "repeat(1, 1fr)",
                   "repeat(2, 1fr)",
                   "repeat(4, 1fr)",
                 ]}
-                gap={[2, 6]}
+                gap={[3, 6]}
                 alignItems="center"
                 mt={8}
               >

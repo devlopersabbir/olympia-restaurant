@@ -38,17 +38,3 @@ const PopularDishes = () => {
 };
 
 export default PopularDishes;
-{
-  /* <>
-  {dishe.map((item: any, index: number) => {
-    <Item
-      image={item?.image}
-      name={item?.name}
-      shortDescription={item?.shortDescription}
-      logDescription={item?.logDescription}
-      price={item?.price}
-      key={index}
-    />;
-  })}
-</>; */
-}
